@@ -1,8 +1,9 @@
 body {
-  background: #000;
-  color: #fff;
   font-family: Arial, sans-serif;
   text-align: center;
+  background: #000;
+  color: #fff;
+  padding-top: 40px;
 }
 
 input, button {
@@ -17,13 +18,20 @@ button {
   font-weight: bold;
 }
 
-img {
-  width: 200px;
-  margin: 20px auto;
+#credencial {
+  width: 280px;
+  margin: 40px auto;
+}
+
+#foto {
+  width: 140px;
+  border-radius: 50%;
+  margin-bottom: 15px;
 }
 
 #estado {
-  padding: 20px;
+  margin-top: 15px;
+  padding: 10px;
   font-size: 22px;
   font-weight: bold;
 }
