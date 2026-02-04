@@ -2,7 +2,7 @@ async function login() {
   const user = document.getElementById("usuario").value;
   const pass = document.getElementById("password").value;
 
-  const response = await fetch("https://script.google.com/macros/s/AKfycbzbPxRQ8weWZkXTojeQmGZgQHAcR7Za_mCy1ULDxtHQD7J5tuak1yzDEKSDXwjjEaTpQw/exec", {
+  const response = await fetch("https://script.google.com/macros/s/AKfycbyKvaxROe_OvMICF2d2AJB-O_pFrucJIBnbYgHmcC3b9xYCHHy-PjHTjCr82cFZQboEAQ/exec", {
     method: "POST",
     body: JSON.stringify({
       usuario: user,
