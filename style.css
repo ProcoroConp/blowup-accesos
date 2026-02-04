@@ -34,4 +34,14 @@ button {
   padding: 10px;
   font-size: 22px;
   font-weight: bold;
+  button {
+  margin-top: 20px;
+  padding: 12px;
+  width: 80%;
+  font-weight: bold;
+  background: #444;
+  color: white;
+  border: none;
+}
+
 }
