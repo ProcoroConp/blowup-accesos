@@ -35,7 +35,7 @@ const usuario = params.get("usuario");
 if (!usuario) {
   document.getElementById("card").innerHTML = "Usuario no definido";
 } else {
-  fetch("PEGA_AQUI_TU_URL_DEL_SCRIPT?usuario=" + usuario)
+  fetch("https://script.google.com/macros/s/AKfycbzp6vA5GTRv4sJ68xtdU0qMRrfmapq_kBbgOt-XM04Puq-ToNYWqqSX1Nvgh41Tz4c4ug/exec?usuario=" + usuario)
     .then(r => r.json())
     .then(d => {
       if (!d.ok) {
