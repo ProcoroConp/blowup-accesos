@@ -2,26 +2,59 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Blow Up Experience | Accesos</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Blow Up Experience México | Accesos</title>
+  <style>
+    body {
+      background:#000;
+      color:#fff;
+      font-family:Arial;
+      text-align:center;
+    }
+    .credencial {
+      width:260px;
+      margin:40px auto;
+      padding:20px;
+      border-radius:12px;
+    }
+    .VALIDA { background:#F5C542; color:#000; }
+    .CANCELADA { background:#6B4A2D; }
+    img { width:100%; border-radius:10px; }
+  </style>
 </head>
 <body>
 
-<div id="login">
-  <h1>BLOW UP EXPERIENCE MÉXICO</h1>
-  <h2>ACCESOS</h2>
+<h1>BLOW UP EXPERIENCE MÉXICO</h1>
+<h2>ACCESOS</h2>
 
-  <input id="usuario" placeholder="Usuario">
-  <input id="password" type="password" placeholder="Contraseña">
-  <button onclick="login()">Entrar</button>
-  <p id="error"></p>
-</div>
+<div id="card"></div>
 
-<div id="credencial" style="display:none;">
-  <h1>BLOW UP EXPERIENCE MÉXICO</h1>
-  <h2>ACCESOS</h2>
+<script>
+const params = new URLSearchParams(window.location.search);
+const usuario = params.get("usuario");
 
-  <h3 id="nombre"></h3>
-  <div id="estado"></div>
+if (!usuario) {
+  document.getElementById("card").innerHTML = "Usuario no definido";
+} else {
+  fetch("PEGA_AQUI_TU_URL_DEL_SCRIPT?usuario=" + usuario)
+    .then(r => r.json())
+    .then(d => {
+      if (!d.ok) {
+        document.getElementById("card").innerHTML = d.mensaje;
+        return;
+      }
 
-  <!-- BOTÓN
+      document.getElementById("card").innerHTML = `
+        <div class="credencial ${d.estatus}">
+          <img src="${d.foto}">
+          <h3>${d.nombre}</h3>
+          <strong>${d.estatus}</strong>
+        </div>
+        <br>
+        <button onclick="location.href='/'">Regresar</button>
+      `;
+    });
+}
+</script>
+
+</body>
+</html>
