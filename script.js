@@ -38,4 +38,13 @@ function login() {
       document.getElementById("error").innerText = "Error de conexión al servidor";
       console.error(err);
     });
+  function regresar() {
+  document.getElementById("credencial").style.display = "none";
+  document.getElementById("login").style.display = "block";
+
+  document.getElementById("usuario").value = "";
+  document.getElementById("password").value = "";
+  document.getElementById("error").innerText = "";
+}
+
 }
