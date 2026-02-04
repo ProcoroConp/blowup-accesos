@@ -1,0 +1,29 @@
+body {
+  background: #000;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+input, button {
+  padding: 12px;
+  margin: 8px;
+  width: 80%;
+}
+
+button {
+  background: #f5c400;
+  border: none;
+  font-weight: bold;
+}
+
+img {
+  width: 200px;
+  margin: 20px auto;
+}
+
+#estado {
+  padding: 20px;
+  font-size: 22px;
+  font-weight: bold;
+}
