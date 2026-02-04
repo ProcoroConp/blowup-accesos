@@ -1,5 +1,5 @@
-// **TU URL DE GOOGLE APPS SCRIPT AQUÍ**
-const URL = "https://script.google.com/macros/s/AKfycbyKvaxROe_OvMICF2d2AJB-O_pFrucJIBnbYgHmcC3b9xYCHHy-PjHTjCr82cFZQboEAQ/exec";
+// **https://script.google.com/macros/s/AKfycbya6Y5e9R6abA__NBWuuKRFVxJWRuww1nify5-HgK2ZgFDAgCU52CDjtUzSLQuDcq0f9Q/exec**
+const URL = "https://script.google.com/macros/s/AKfycbya6Y5e9R6abA__NBWuuKRFVxJWRuww1nify5-HgK2ZgFDAgCU52CDjtUzSLQuDcq0f9Q/exec";
 
 function login() {
   const usuario = document.getElementById("usuario").value.trim();
